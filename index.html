@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+      <!--Import Google Icon Font-->
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <!--Import materialize.css-->
+      <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+<link type="text/css" rel="stylesheet" href="css/style.css"  media="screen,projection"/>
+      <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </head>
+<nav>
+    <div class="nav-wrapper carrot">
+      <a href="#" class="brand-logo center"><img class="logo" src="img/logo.png"/></a>
+	        <form class="left">
+        <div class="input-field">
+          <input id="search" type="search" required>
+          <label class="label-icon" for="search"><i class="material-icons">search</i></label>
+          <i class="material-icons">close</i>
+        </div>
+      </form>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li><a href="index.html">Books</a></li>
+        <li><a href="inventory.html">Inventory</a></li>
+        <li><a href="cart.html">Cart</a></li>
+      </ul>
+    </div>
+  </nav>
+    <body>
+	<div class="container">
+        
+      </div>
+	  
+      <!--JavaScript at end of body for optimized loading-->
+	  <script
+			  src="https://code.jquery.com/jquery-3.6.0.min.js"
+			  ></script>
+      <script type="text/javascript" src="js/materialize.min.js"></script>
+	  <script type="text/javascript" src="js/books.js"></script>
+	  <script type="text/javascript" src="js/nw-ops.js"></script>
+	  <script>
+	  var test_data = [{
+            "isbn":"9781593279509",
+            "name":"Eloquent JavaScript, Third Edition",
+            "subname":"A Modern Introduction to Programming",
+            "author":"Marijn Haverbeke",
+            "published":"2018-12-04T00:00:00.000Z",
+            "publisher":"No Starch Press",
+            "price":472,
+            "description":"JavaScript lies at the heart of almost every modern web application, from social apps like Twitter to browser-based game frameworks like Phaser and Babylon. Though simple for beginners to pick up and play with, JavaScript is a flexible, complex language that you can use to build full-scale applications.",
+            "website":"http://eloquentjavascript.net/"
+        },
+        {
+            "isbn":"9781491943533",
+            "name":"Practical Modern JavaScript",
+            "subname":"Dive into ES6 and the Future of JavaScript",
+            "author":"Nicolás Bevacqua",
+            "published":"2017-07-16T00:00:00.000Z",
+            "publisher":"O'Reilly Media",
+            "price":334,
+            "description":"To get the most out of modern JavaScript, you need learn the latest features of its parent specification, ECMAScript 6 (ES6). This book provides a highly practical look at ES6, without getting lost in the specification or its implementation details.",
+            "website":"https://github.com/mjavascript/practical-modern-javascript"
+        },
+        {
+            "isbn":"9781593277574",
+            "name":"Understanding ECMAScript 6",
+            "subname":"The Definitive Guide for JavaScript Developers",
+            "author":"Nicholas C. Zakas",
+            "published":"2016-09-03T00:00:00.000Z",
+            "publisher":"No Starch Press",
+            "price":352,
+            "description":"ECMAScript 6 represents the biggest update to the core of JavaScript in the history of the language. In Understanding ECMAScript 6, expert developer Nicholas C. Zakas provides a complete guide to the object types, syntax, and other exciting changes that ECMAScript 6 brings to JavaScript.",
+            "website":"https://leanpub.com/understandinges6/read"
+        },
+        {
+            "isbn":"9781449365035",
+            "name":"Speaking JavaScript",
+            "subname":"An In-Depth Guide for Programmers",
+            "author":"Axel Rauschmayer",
+            "published":"2014-04-08T00:00:00.000Z",
+            "publisher":"O'Reilly Media",
+            "price":460,
+            "description":"Like it or not, JavaScript is everywhere these days -from browser to server to mobile- and now you, too, need to learn the language or dive deeper than you have. This concise book guides you into and through JavaScript, written by a veteran programmer who once found himself in the same position.",
+            "website":"http://speakingjs.com/"
+        },{
+            "isbn":"9781593279509",
+            "name":"Eloquent JavaScript, Third Edition",
+            "subname":"A Modern Introduction to Programming",
+            "author":"Marijn Haverbeke",
+            "published":"2018-12-04T00:00:00.000Z",
+            "publisher":"No Starch Press",
+            "price":472,
+            "description":"JavaScript lies at the heart of almost every modern web application, from social apps like Twitter to browser-based game frameworks like Phaser and Babylon. Though simple for beginners to pick up and play with, JavaScript is a flexible, complex language that you can use to build full-scale applications.",
+            "website":"http://eloquentjavascript.net/"
+        },{
+            "isbn":"9781593279509",
+            "name":"Eloquent JavaScript, Third Edition",
+            "subname":"A Modern Introduction to Programming",
+            "author":"Marijn Haverbeke",
+            "published":"2018-12-04T00:00:00.000Z",
+            "publisher":"No Starch Press",
+            "price":472,
+            "description":"JavaScript lies at the heart of almost every modern web application, from social apps like Twitter to browser-based game frameworks like Phaser and Babylon. Though simple for beginners to pick up and play with, JavaScript is a flexible, complex language that you can use to build full-scale applications.",
+            "website":"http://eloquentjavascript.net/"
+        },{
+            "isbn":"9781593279509",
+            "name":"Eloquent JavaScript, Third Edition",
+            "subname":"A Modern Introduction to Programming",
+            "author":"Marijn Haverbeke",
+            "published":"2018-12-04T00:00:00.000Z",
+            "publisher":"No Starch Press",
+            "price":472,
+            "description":"JavaScript lies at the heart of almost every modern web application, from social apps like Twitter to browser-based game frameworks like Phaser and Babylon. Though simple for beginners to pick up and play with, JavaScript is a flexible, complex language that you can use to build full-scale applications.",
+            "website":"http://eloquentjavascript.net/"
+        },{
+            "isbn":"9781593279509",
+            "name":"Eloquent JavaScript, Third Edition",
+            "subname":"A Modern Introduction to Programming",
+            "author":"Marijn Haverbeke",
+            "published":"2018-12-04T00:00:00.000Z",
+            "publisher":"No Starch Press",
+            "price":472,
+            "description":"JavaScript lies at the heart of almost every modern web application, from social apps like Twitter to browser-based game frameworks like Phaser and Babylon. Though simple for beginners to pick up and play with, JavaScript is a flexible, complex language that you can use to build full-scale applications.",
+            "website":"http://eloquentjavascript.net/"
+        },{
+            "isbn":"9781593279509",
+            "name":"Eloquent JavaScript, Third Edition",
+            "subname":"A Modern Introduction to Programming",
+            "author":"Marijn Haverbeke",
+            "published":"2018-12-04T00:00:00.000Z",
+            "publisher":"No Starch Press",
+            "price":472,
+            "description":"JavaScript lies at the heart of almost every modern web application, from social apps like Twitter to browser-based game frameworks like Phaser and Babylon. Though simple for beginners to pick up and play with, JavaScript is a flexible, complex language that you can use to build full-scale applications.",
+            "website":"http://eloquentjavascript.net/"
+        },{
+            "isbn":"9781593279509",
+            "name":"Eloquent JavaScript, Third Edition",
+            "subname":"A Modern Introduction to Programming",
+            "author":"Marijn Haverbeke",
+            "published":"2018-12-04T00:00:00.000Z",
+            "publisher":"No Starch Press",
+            "price":472,
+            "description":"JavaScript lies at the heart of almost every modern web application, from social apps like Twitter to browser-based game frameworks like Phaser and Babylon. Though simple for beginners to pick up and play with, JavaScript is a flexible, complex language that you can use to build full-scale applications.",
+            "website":"http://eloquentjavascript.net/"
+        },{
+            "isbn":"9781593279509",
+            "name":"Eloquent JavaScript, Third Edition",
+            "subname":"A Modern Introduction to Programming",
+            "author":"Marijn Haverbeke",
+            "published":"2018-12-04T00:00:00.000Z",
+            "publisher":"No Starch Press",
+            "price":472,
+            "description":"JavaScript lies at the heart of almost every modern web application, from social apps like Twitter to browser-based game frameworks like Phaser and Babylon. Though simple for beginners to pick up and play with, JavaScript is a flexible, complex language that you can use to build full-scale applications.",
+            "website":"http://eloquentjavascript.net/"
+        },{
+            "isbn":"9781593279509",
+            "name":"Eloquent JavaScript, Third Edition",
+            "subname":"A Modern Introduction to Programming",
+            "author":"Marijn Haverbeke",
+            "published":"2018-12-04T00:00:00.000Z",
+            "publisher":"No Starch Press",
+            "price":472,
+            "description":"JavaScript lies at the heart of almost every modern web application, from social apps like Twitter to browser-based game frameworks like Phaser and Babylon. Though simple for beginners to pick up and play with, JavaScript is a flexible, complex language that you can use to build full-scale applications.",
+            "website":"http://eloquentjavascript.net/"
+        },{
+            "isbn":"9781593279509",
+            "name":"Eloquent JavaScript, Third Edition",
+            "subname":"A Modern Introduction to Programming",
+            "author":"Marijn Haverbeke",
+            "published":"2018-12-04T00:00:00.000Z",
+            "publisher":"No Starch Press",
+            "price":472,
+            "description":"JavaScript lies at the heart of almost every modern web application, from social apps like Twitter to browser-based game frameworks like Phaser and Babylon. Though simple for beginners to pick up and play with, JavaScript is a flexible, complex language that you can use to build full-scale applications.",
+            "website":"http://eloquentjavascript.net/"
+        },{
+            "isbn":"9781593279509",
+            "name":"Eloquent JavaScript, Third Edition",
+            "subname":"A Modern Introduction to Programming",
+            "author":"Marijn Haverbeke",
+            "published":"2018-12-04T00:00:00.000Z",
+            "publisher":"No Starch Press",
+            "price":472,
+            "description":"JavaScript lies at the heart of almost every modern web application, from social apps like Twitter to browser-based game frameworks like Phaser and Babylon. Though simple for beginners to pick up and play with, JavaScript is a flexible, complex language that you can use to build full-scale applications.",
+            "website":"http://eloquentjavascript.net/"
+        },];
+	  var books = new BooksManager('http://localhost:9999');
+	  books.fillBooks(test_data);
+	  
+	  
+	  function addToCart(evt){
+	  var cartJson = localStorage.getItem('cart');
+	  var cart =[];
+	  if(cartJson){
+		cart = JSON.parse(cartJson);
+		}
+		var cart_item = {};
+		var name = $('#'+evt).find('.bookName').text();
+		cart_item.name=name;
+		cart_item.price = parseInt($('#'+evt).find('.price').text().replace(' AED',''));
+		cart_item.type ='generic';
+		cart_item.image =$('#'+evt).find('img').attr('src');
+		cart_item.description = $('#'+evt).find('.desc').text();
+		cart_item.isbn = $('#'+evt).find('.isbnNum').text();
+		cart_item.author = $('#'+evt).find('.authorName').text(); 
+		cart.push(cart_item)
+		localStorage.setItem('cart', JSON.stringify(cart));
+		M.toast({html: name+' added to cart!', classes: 'rounded'});
+	  }
+	  </script>
+    </body>
+  </html>
