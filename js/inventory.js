@@ -23,4 +23,7 @@ constructor: InventoryManager,
 		row+='</div>';
 		$(row).appendTo('.container');
 	},
+	saveBook:function(book){
+		_inventoryManager.api.saveBook(book,callback);
+	}
 };

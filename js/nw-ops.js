@@ -21,5 +21,8 @@ APIClient.prototype = {
 			data: cart,
 			success:callback
 		})
+	},
+	saveBook:function(callback){
+		$.ajax({url:_api.url+'/bookstore/saveBook',method:'POST',data:book,success:callback});
 	}
 };
