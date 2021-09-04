@@ -1,7 +1,7 @@
 function CartManager(endpoint) {
     this.api = new APIClient(endpoint);
 	window._cartManager = null;
-        window._cartManager = this;
+    window._cartManager = this;
 }
 CartManager.prototype = {
 constructor: CartManager,
@@ -12,7 +12,9 @@ constructor: CartManager,
 	loadBooks: function(){
 		var cartJson = localStorage.getItem('cart');
 		cartItems = JSON.parse(cartJson);
+		if(cartItems){
 		_cartManager.fillBooks(cartItems)
+		}
 	},
 	fillBooks:function(books){
 		var row='<div class="row">';
