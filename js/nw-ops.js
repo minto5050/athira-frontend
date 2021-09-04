@@ -13,8 +13,12 @@ APIClient.prototype = {
 	get: function(){
 		
 	},
-	post: function(){
-		
+	checkout: function(cartJson){
+		alert("checkout");
+		$.post('/bookstore/checkout/GET_FIVE', cartJson, function(response){ 
+			alert("success");
+			//$("#mypar").html(response.amount);
+		});
 	}
 	
 };

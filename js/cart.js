@@ -32,4 +32,10 @@ constructor: CartManager,
 			$('#checkout_button').addClass('disabled')
 		}
 	}
+	checkout:function(cartjson) {
+		
+		alert(cartJson);
+		_cartManager.api.checkout(cartjson);
+		
+	}
 };
