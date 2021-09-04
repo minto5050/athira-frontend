@@ -33,7 +33,7 @@ constructor: CartManager,
 		if(total<=0){
 			$('#checkout_button').addClass('disabled')
 		}
-	}
+	},
 	checkout:function(cartjson) {
 		
 		alert(cartJson);
