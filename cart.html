@@ -40,7 +40,7 @@
 		  <strong>Total:</strong><p id="total-price">0 AED</p>
         </div>
         <div class="card-action">
-          <a class="btn modal-trigger" id="checkout_button" data-target="modal1" onclick="checkoutBook()" href="#">Checkout</a>
+          <a class="btn modal-trigger" id="checkout_button" data-target="modal1" href="#">Checkout</a>
         </div>
       </div>
 		</div>
@@ -58,7 +58,7 @@
         </div>
     </div>
     <div class="modal-footer">
-      <a href="#!" class="modal-close waves-effect waves-green btn-flat">Pay</a>
+      <a href="#!" onclick="checkoutBook()" class="modal-close waves-effect waves-green btn-flat">Pay</a>
 	  <a href="#!" class="modal-close waves-effect waves-green btn-flat">Cancel</a>
     </div>
   </div>
@@ -91,7 +91,8 @@
 	  }
 	  function checkoutBook(){
 		var cartJson = localStorage.getItem('cart');
-		cart.checkout(cartJson);
+		var coupon = $('#coupon_code').val();
+		cart.checkout(cartJson,coupon);
 		
 	  }
 		</script>
