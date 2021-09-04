@@ -40,7 +40,7 @@
 		  <strong>Total:</strong><p id="total-price">0 AED</p>
         </div>
         <div class="card-action">
-          <a class="btn modal-trigger" id="checkout_button" data-target="modal1" onclick="checkout()" href="#">Checkout</a>
+          <a class="btn modal-trigger" id="checkout_button" data-target="modal1" onclick="checkoutBook()" href="#">Checkout</a>
         </div>
       </div>
 		</div>
@@ -89,7 +89,9 @@
 			$('#checkout_button').addClass('disabled')
 		}
 	  }
-	  function checkout(){
+	  function checkoutBook(){
+		var cartJson = localStorage.getItem('cart');
+		cart.checkout(cartJson);
 		
 	  }
 		</script>
