@@ -22,7 +22,8 @@ constructor: InventoryManager,
 		});
 		row+='</div>';
 		$(row).appendTo('.container');
-	},
+		$('.empty-message').hide();
+		},
 	saveBook:function(book){
 		_inventoryManager.api.saveBook(book,callback);
 	}
